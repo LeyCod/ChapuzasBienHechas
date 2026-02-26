@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapuzas Bien Hechas | Reparaciones Profesionales</title>
+    
+    <!-- Tailwind CSS (Framework base) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Iconos y Tipografía -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Archivo CSS externo -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-white text-slate-900">
+
+    <!-- Navegación -->
+    <header class="header-nav">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="logo">
+                <i class="fas fa-hammer text-orange-500 text-2xl"></i>
+                <span class="text-xl font-bold">Chapuzas<span class="text-orange-500">BienHechas</span></span>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#inicio" class="nav-link">Inicio</a>
+                <a href="#servicios" class="nav-link">Servicios</a>
+                <a href="#nosotros" class="nav-link">Nosotros</a>
+                <a href="#contacto" class="btn-primary-sm">Contacto</a>
+            </div>
+
+            <button class="md:hidden text-2xl" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+        
+        <!-- Menú Móvil -->
+        <div id="mobileMenu" class="mobile-menu hidden">
+            <a href="#inicio" class="mobile-link">Inicio</a>
+            <a href="#servicios" class="mobile-link">Servicios</a>
+            <a href="#nosotros" class="mobile-link">Nosotros</a>
+            <a href="#contacto" class="mobile-link font-bold text-orange-500">Pedir Presupuesto</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-section">
+        <div class="container mx-auto px-6 text-white">
+            <div class="max-w-2xl">
+                <span class="badge">Rápidos y Limpios</span>
+                <h1 class="hero-title">Reparaciones que <span class="text-orange-400">sí duran.</span></h1>
+                <p class="hero-subtitle">Soluciones profesionales en electricidad, fontanería y bricolaje para tu hogar u oficina en tiempo récord.</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#contacto" class="btn-orange">Presupuesto Gratis</a>
+                    <a href="tel:+34900000000" class="btn-outline">Llamar Ahora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="py-24">
+        <div class="container mx-auto px-6">
+            <div class="section-header">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Nuestros Servicios</h2>
+                <p class="text-slate-500">Especialistas en lo que tu casa necesita.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Servicio: Electricidad -->
+                <div class="service-card group">
+                    <div class="icon-box bg-orange-100 text-orange-500 group-hover:bg-orange-500 group-hover:text-white">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Electricidad</h3>
+                    <p class="text-slate-600 mb-6">Desde cambiar un enchufe hasta instalaciones completas y cuadros eléctricos.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check text-orange-500"></i> Boletines luz</li>
+                        <li><i class="fas fa-check text-orange-500"></i> Instalación lámparas</li>
+                        <li><i class="fas fa-check text-orange-500"></i> Apagones urgentes</li>
+                    </ul>
+                </div>
+
+                <!-- Servicio: Fontanería -->
+                <div class="service-card group">
+                    <div class="icon-box bg-blue-100 text-blue-500 group-hover:bg-blue-500 group-hover:text-white">
+                        <i class="fas fa-faucet-drip"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Fontanería</h3>
+                    <p class="text-slate-600 mb-6">Reparación de fugas, cisternas, desatascos e instalación de grifería nueva.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check text-blue-500"></i> Fugas de agua</li>
+                        <li><i class="fas fa-check text-blue-500"></i> Humedades</li>
+                        <li><i class="fas fa-check text-blue-500"></i> Termos y calderas</li>
+                    </ul>
+                </div>
+
+                <!-- Servicio: Bricolaje -->
+                <div class="service-card group">
+                    <div class="icon-box bg-green-100 text-green-500 group-hover:bg-green-500 group-hover:text-white">
+                        <i class="fas fa-toolbox"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Bricolaje</h3>
+                    <p class="text-slate-600 mb-6">Montaje de muebles, colgar cuadros, estanterías y arreglos varios de hogar.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check text-green-500"></i> Montaje IKEA</li>
+                        <li><i class="fas fa-check text-green-500"></i> Persianas</li>
+                        <li><i class="fas fa-check text-green-500"></i> Carpintería básica</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-24 bg-slate-50">
+        <div class="container mx-auto px-6">
+            <div class="form-container">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold mb-4">¿Hablamos?</h2>
+                    <p class="text-slate-500">Cuéntanos qué necesitas y te responderemos en minutos.</p>
+                </div>
+
+                <form id="contactForm" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" class="form-input" required>
+                        <input type="tel" id="telefono" name="telefono" placeholder="Tu teléfono" class="form-input" required>
+                    </div>
+                    <select id="servicio" name="servicio" class="form-input bg-white">
+                        <option value="electricidad">Electricidad</option>
+                        <option value="fontaneria">Fontanería</option>
+                        <option value="bricolaje">Bricolaje</option>
+                        <option value="urgencia">Urgencia 24h</option>
+                    </select>
+                    <textarea id="mensaje" name="mensaje" placeholder="Describe brevemente el problema..." rows="4" class="form-input" required></textarea>
+                    
+                    <button type="submit" class="btn-submit">Enviar Solicitud</button>
+                </form>
+                
+                <div id="formStatus" class="status-msg hidden">
+                    <i class="fas fa-check-circle mr-2"></i> ¡Solicitud enviada! Te llamaremos en breve.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Flotante -->
+    <a href="https://wa.me/34600000000" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts externos -->
+    <script src="script.js"></script>
+</body>
+</html>
